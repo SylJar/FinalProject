@@ -63,7 +63,7 @@ public class PersonalInformationOrderPage extends PageBase{
         orderButton.click();
     }
 
-    public void takeSnapShoot(WebDriver driver) throws IOException, InterruptedException {
+    public void takeSnapShoot(WebDriver driver) throws IOException {
         Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
         ImageIO.write(screenshot.getImage(),"PNG", new File(("target//ScreenshotOrderConfirmation.png")));
     }
